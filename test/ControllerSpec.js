@@ -83,7 +83,7 @@ describe('controller', function () {
 		it('should show all entries without "all" route', function () {
 			var todo = { title: 'my todo' };
 			setUpModel([todo]);
-			// Question
+
 			subject.setView('#/');
 
 			expect(view.render).toHaveBeenCalledWith('showEntries', [todo]);
@@ -154,19 +154,26 @@ describe('controller', function () {
 
 	it('should highlight "All" filter by default', function () {
 		// TODO: write test
+		subject.setView("");
+		expect(view.render).toHaveBeenCalledWith("setFilter", "");
 	});
 
 	it('should highlight "Active" filter when switching to active view', function () {
 		// TODO: write test
+		// look filter and see active
+
+
 	});
 
 	describe('toggle all', function () {
 		it('should toggle all todos to completed', function () {
 			// TODO: write test
+
 		});
 
 		it('should update the view', function () {
 			// TODO: write test
+			// Check if toggle all update the view
 		});
 	});
 
